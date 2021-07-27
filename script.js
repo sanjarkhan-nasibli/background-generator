@@ -11,7 +11,7 @@ function setGradient() {
 
 function randomHexNumber() {
   return Math.floor(Math.random() * (16777215 - 1) + 1).toString(16);
-}
+};
  
 function setRandomColors() {
   color1.value = "#" + randomHexNumber();

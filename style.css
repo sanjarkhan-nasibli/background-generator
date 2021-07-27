@@ -10,6 +10,8 @@ body {
 }
 
 .random {
+	color: rgba(0, 0, 0, 0.75);
+	font-size: medium;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 	transition: all 0.2s;
@@ -18,10 +20,38 @@ body {
 	border-radius: 10px;
 }
 
+/*.copy {
+	color: rgba(0, 0, 0, 0.75);
+	font-size: medium;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	transition: all 0.2s;
+	background: rgba(255, 255, 255, 0.5);
+	border-color: rgba(255, 255, 255, 0);
+	border-radius: 10px;
+	margin-left: 10px;
+}*/
+
+@media only screen and (max-width: 600px) {
+    .container {
+        font-size: 0.85em;
+        padding: 0;
+    }
+}
+
+.container {
+	margin-top: 100px;
+}
+
 .random:hover {
 	transform: scale(1.02);
 	cursor: pointer;
 }
+
+/*.copy:hover {
+	transform: scale(1.02);
+	cursor: pointer;
+}*/
 
 input {
 	transition: all 0.2s;
@@ -33,11 +63,26 @@ input:hover {
 }
 
 #footer {  
-   bottom: 2px;  
+	bottom: 0px;
    height: 40px;  
    margin-top: 40px;  
    text-align: center;  
    vertical-align: middle; 
    position: fixed;
    width: 100%;
+   font-size: small;
+}
+
+@font-face {
+  font-family: 'entypo';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-90/entypo.woff') format('woff');
+}
+
+.entypo-heart:before {
+  content:"\2665";
+}
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  color: red;
 }
